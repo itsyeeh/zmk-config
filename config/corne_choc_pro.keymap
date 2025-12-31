@@ -67,15 +67,15 @@
 
         fn_layer {
             display-name = "FN";
-            // ----------------------------------------------------------------------------------------------
-            // |      |      |     |     |      |        |   |   |     |      |          |          |   |   |
-            // |      | BT1  | BT2 | BT3 |      |        |   |   |     |      |          |          |   |   |
-            // |      | BTCR |     | RST | BOOT | Unlock |       |     | MUTE | C_VOL_DN | C_VOL_UP |   |   |
+            // ------------------------------------------------------------------------------------------------
+            // |      | F1   | F2  | F3  | F4   | F5     |   |   | F6  | F7   | F8       | F9       | F10 |   |
+            // |      | BT1  | BT2 | BT3 |      |        |   |   |     |      |          |          |     |   |
+            // |      | BTCR |     | RST | BOOT | Unlock |       |     | MUTE | C_VOL_DN | C_VOL_UP |     |   |
             //                     |     |      |        |       |     |      |          |
             bindings = <
-                &trans &trans       &trans       &trans       &trans       &trans         &trans &trans  &trans &trans                  &trans &trans &trans &trans
-                &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans       &trans         &trans &trans  &trans &trans                  &trans &trans &trans &trans
-                &trans &bt BT_CLR   &trans       &sys_reset   &bootloader  &studio_unlock                &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP  &trans &trans
+                &trans &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &trans &trans  &kp F6 &kp F7     &kp F8       &kp F9        &kp F10 &trans
+                &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans       &trans         &trans &trans  &trans &trans     &trans       &trans        &trans  &trans
+                &trans &bt BT_CLR   &trans       &sys_reset   &bootloader  &studio_unlock                &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP  &trans  &trans
                                                  &trans       &trans       &trans                        &trans &trans     &trans
             >;
         };

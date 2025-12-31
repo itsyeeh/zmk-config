@@ -64,5 +64,20 @@
                                           &kp LGUI &kp SPACE &trans                 &kp RET   &trans    &kp RALT
             >;
         };
+
+        fn_layer {
+            display-name = "FN";
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |     |     |     |     |       |   |   |     |   |     |   |   | BSPC |
+            // | CTRL | BT1 | BT2 | BT3 |     |       |   |   |     |   |     |   |   |      |
+            // | SHFT | BTCR|     | RST | BOOT| Unlock|       |     |   |     |   |   |      |
+            //                    | GUI | SPC |       |       | ENT |   | ALT |
+            bindings = <
+                &kp TAB   &trans       &trans       &trans       &trans       &trans         &trans &trans  &trans  &trans &trans  &trans  &trans &kp BSPC
+                &kp LCTRL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans       &trans         &trans &trans  &trans  &trans &trans  &trans  &trans &trans
+                &kp LSHFT &bt BT_CLR   &trans       &sys_reset   &bootloader  &studio_unlock                &trans  &trans &trans  &trans  &trans &trans
+                                                    &kp LGUI     &kp SPACE    &trans                        &kp RET &trans &kp RALT
+            >;
+        };
     };
 };

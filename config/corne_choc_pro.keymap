@@ -17,6 +17,7 @@
             timeout-ms = <50>;
             key-positions = <23 24>; // The positions of J and K on a 42-key Corne
             bindings = <&kp ESC>;
+            layers = <0>;           // 0 is the index of your BASE layer
         };
     };
 };

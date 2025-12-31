@@ -10,6 +10,18 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <19 20>; // The positions of J and K on a 42-key Corne
+            bindings = <&kp ESC>;
+        };
+    };
+};
+
+/ {
     chosen {
         zmk,physical-layout = &default_layout;
     };

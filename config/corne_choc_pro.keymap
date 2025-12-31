@@ -46,7 +46,7 @@
                 &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &trans &trans &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
                 &kp LCTRL &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &trans &trans &kp MINUS &kp EQUAL &kp BSLH  &kp LBKT &kp RBKT &kp GRAVE
                 &kp LSHFT &kp N6   &kp N7 &kp N8   &kp N9   &kp N0                  &kp UNDER &kp PLUS  &kp PIPE  &kp LBRC &kp RBRC &kp TILDE
-                                          &kp LSHFT &mt LGUI SPACE $kp TAB                 &trans    &kp RET    &kp RALT
+                                          &kp LSHFT &mt LGUI SPACE &kp TAB                 &trans    &kp RET    &kp RALT
             >;
         };
 

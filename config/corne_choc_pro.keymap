@@ -41,12 +41,12 @@
             // |  TAB |  1  |  2  |  3  |  4  |  5    |   |   |  6    |  7   |  8  |  9    |  0  | BSPC |
             // | CTRL | BT1 | BT2 | BT3 |     |       |   |   | LFT   | DWN  |  UP | RGT   |     |      |
             // | SHFT | BTCR|     | RST | BOOT| Unlock|       | PG_UP | HOME | END | PG_DN |     |      |
-            //                    | GUI | SPC |       |       | GUI   |      | SPC |
+            //                    | GUI | SPC |       |       | GUI   |      | ALT |
             bindings = <
-                &kp TAB   &kp N1       &kp N2          &kp N3       &kp N4       &kp N5        &trans &trans  &kp N6    &kp N7   &kp N8  &kp N9     &kp N0 &kp BSPC
-                &kp LCTRL &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2 &trans       &trans        &trans &trans  &kp LEFT  &kp DOWN &kp UP  &kp RIGHT  &trans &trans
-                &kp LSHFT &bt BT_CLR   &trans          &sys_reset   &bootloader  &studio_unlock               &kp PG_UP &kp HOME &kp END &kp  PG_DN &trans &trans
-                                                       &kp LGUI     &kp SPACE    &trans                       &kp LGUI  &trans   &kp SPACE
+                &kp TAB   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &trans &trans  &kp N6    &kp N7   &kp N8   &kp N9     &kp N0 &kp BSPC
+                &kp LCTRL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans       &trans         &trans &trans  &kp LEFT  &kp DOWN &kp UP   &kp RIGHT  &trans &trans
+                &kp LSHFT &bt BT_CLR   &trans       &sys_reset   &bootloader  &studio_unlock                &kp PG_UP &kp HOME &kp END  &kp PG_DN  &trans &trans
+                                                    &kp LGUI     &kp SPACE    &trans                        &kp LGUI  &trans   &kp RALT
             >;
         };
 
@@ -58,9 +58,9 @@
             // | SHFT |  6  |  7  |  8  |  9  |  0  |       |  _  |  +  | "|" |  {  |  }  |  ~   |
             //                    | GUI | SPC |     |       | ENT |     | ALT |
             bindings = <
-                &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &trans &trans &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-                &kp LCTRL &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &trans &trans &kp MINUS &kp EQUAL &kp BSLH &kp LBKT &kp RBKT &kp GRAVE
-                &kp LSHFT &kp N6   &kp N7 &kp N8   &kp N9   &kp N0                  &kp UNDER &kp PLUS  &kp PIPE &kp LBRC &kp RBRC &kp TILDE
+                &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &trans &trans &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+                &kp LCTRL &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &trans &trans &kp MINUS &kp EQUAL &kp BSLH  &kp LBKT &kp RBKT &kp GRAVE
+                &kp LSHFT &kp N6   &kp N7 &kp N8   &kp N9   &kp N0                  &kp UNDER &kp PLUS  &kp PIPE  &kp LBRC &kp RBRC &kp TILDE
                                           &kp LGUI &kp SPACE &trans                 &kp RET   &trans    &kp RALT
             >;
         };

@@ -38,7 +38,7 @@
     // Ctrl-Tab combo
     combo_ctab {
             timeout-ms = <50>;
-            key-positions = <41 2>;
+            key-positions = <42 2>;
             bindings = <&ctab>;
     };
 };

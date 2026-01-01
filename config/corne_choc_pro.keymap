@@ -11,7 +11,7 @@
 
 / {
     macros {
-        ctab: ctab {
+        ctrl_tab: c_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -33,13 +33,6 @@
             bindings = <&kp ESC>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
-    };
-
-    // Ctrl-Tab combo
-    combo_ctab {
-            timeout-ms = <50>;
-            key-positions = <42 2>;
-            bindings = <&ctab>;
     };
 };
 
@@ -87,15 +80,15 @@
         lower_layer {
             display-name = "NAV";
             // -------------------------------------------------------------------------------------------------------
-            // |  TAB |      |     |      |          | VOL_UP |   |   |        |  PG_UP  |  UP   | PG_DN |     | BSPC |
-            // | CTRL | CTRL | ALT | GUI  | SHFT     | VOL_DN |   |   |        |   LFT   |  DWN  | RGT   |     |      |
-            // | SHFT |      |     |      |          | MUTE   |       |        |   HOME  |       | END   |     |      |
-            //                     | SHFT | GUI/SPC  |        |       | BSPC   | ALT/RET |  SHFT |
+            // |  TAB |      | c_tab |      |          | VOL_UP |   |   |        |  PG_UP  |  UP   | PG_DN |     | BSPC |
+            // | CTRL | CTRL | ALT   | GUI  | SHFT     | VOL_DN |   |   |        |   LFT   |  DWN  | RGT   |     |      |
+            // | SHFT |      |       |      |          | MUTE   |       |        |   HOME  |       | END   |     |      |
+            //                       | SHFT | GUI/SPC  |        |       | BSPC   | ALT/RET |  SHFT |
             bindings = <
-                &kp TAB   &trans     &trans   &trans    &trans         &kp C_VOL_UP  &trans &trans  &trans     &kp PG_UP    &kp UP    &kp PG_DN  &trans &kp BSPC
-                &kp LCTRL &sk LCTRL  &sk LALT &sk LGUI  &sk LSHFT      &kp C_VOL_DN  &trans &trans  &trans     &kp LEFT     &kp DOWN  &kp RIGHT  &trans &trans
-                &kp LSHFT &trans     &trans   &trans    &trans         &kp C_MUTE                   &trans     &kp HOME     &trans    &kp END    &trans &trans
-                                              &kp LSHFT &mt LGUI SPACE &trans                       &kp BSPC   &mt RALT RET &kp RSHFT
+                &kp TAB   &trans     &ctrl_tab &trans    &trans         &kp C_VOL_UP  &trans &trans  &trans     &kp PG_UP    &kp UP    &kp PG_DN  &trans &kp BSPC
+                &kp LCTRL &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHFT      &kp C_VOL_DN  &trans &trans  &trans     &kp LEFT     &kp DOWN  &kp RIGHT  &trans &trans
+                &kp LSHFT &trans     &trans    &trans    &trans         &kp C_MUTE                   &trans     &kp HOME     &trans    &kp END    &trans &trans
+                                               &kp LSHFT &mt LGUI SPACE &trans                       &kp BSPC   &mt RALT RET &kp RSHFT
             >;
         };
 

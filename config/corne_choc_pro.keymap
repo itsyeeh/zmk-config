@@ -29,7 +29,7 @@
         
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <23 24>; // The positions of J and K on a 42-key Corne
+            key-positions = <23 24>; // The positions of J and K on a 46-key Corne
             bindings = <&kp ESC>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
@@ -38,7 +38,7 @@
     // Ctrl-Tab combo
     combo_ctab {
             timeout-ms = <50>;
-            key-positions = <2 40>; // W + NAV Thumb
+            key-positions = <41 2>;
             bindings = <&ctab>;
     };
 };

@@ -40,10 +40,10 @@
             // | SHFT |  Z  |  X  |  C   |  V      |  B      |       |  N       |  M       |  ,   |  .  |  /  | FN/ESC |
             //                    | GRAVE/SHFT | GUI/SPC | NAV/TAB |       | SYM/BSPC | ALT/RET  | SQT/SHFT |
             bindings = <
-                &kp TAB   &kp Q   &kp W &kp E            &kp R           &kp T     &trans &trans  &kp Y      &kp U        &kp I     &kp O   &kp P    &kp BSPC
-                &kp LCTRL &kp A   &kp S &kp D            &kp F           &kp G     &trans &trans  &kp H      &kp J        &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LSHFT &lt 3 Z &kp X &kp C            &kp V           &kp B                    &kp N      &kp M        &kp COMMA &kp DOT &kp FSLH &lt 3 ESC
-                                        &mt LSHFT GRAVE  &mt LGUI SPACE  &lt 2 TAB                &lt 1 BSPC &mt ALT RET  &mt RSHFT SQT
+                &kp TAB   &kp Q   &kp W &kp E            &kp R           &kp T     &trans &trans  &kp Y      &kp U        &kp I     &kp O   &kp P      &kp BSPC
+                &kp LCTRL &kp A   &kp S &kp D            &kp F           &kp G     &trans &trans  &kp H      &kp J        &kp K     &kp L   &kp SEMI   &kp SQT
+                &kp LSHFT &kp Z   &kp X &kp C            &kp V           &kp B                    &kp N      &kp M        &kp COMMA &kp DOT &lt 3 FSLH &lt 3 ESC
+                                        &mt LSHFT GRAVE  &mt LGUI SPACE  &lt 2 TAB                &lt 1 BSPC &mt RALT RET &mt RSHFT SQT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -56,25 +56,25 @@
             // | SHFT |  6  |  7  |  8   |  9      |  0  |       |  _  |  +  | "|"  |  {  |  }  |  ~   |
             //                    | SHFT | GUI/SPC |     |       |     |     | SHFT |
             bindings = <
-                &kp  TAB  &kp EXCL &kp AT &kp HASH  &kp DLLR       &kp PRCNT &trans &trans &kp CARET &kp AMPS    &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-                &kp LCTRL &kp N1   &kp N2 &kp N3    &kp N4         &kp N5    &trans &trans &kp MINUS &kp EQUAL   &kp BSLH  &kp LBKT &kp RBKT &kp GRAVE
-                &kp LSHFT &kp N6   &kp N7 &kp N8    &kp N9         &kp N0                  &kp UNDER &kp PLUS    &kp PIPE  &kp LBRC &kp RBRC &kp TILDE
-                                          &kp LSHFT &mt LGUI SPACE &kp TAB                 &trans    &mt ALT RET &kp RSHFT
+                &kp  TAB  &kp EXCL &kp AT &kp HASH        &kp DLLR       &kp PRCNT &trans &trans &kp CARET &kp AMPS     &kp ASTRK     &kp LPAR &kp RPAR &kp BSPC
+                &kp LCTRL &kp N1   &kp N2 &kp N3          &kp N4         &kp N5    &trans &trans &kp MINUS &kp EQUAL    &kp BSLH      &kp LBKT &kp RBKT &kp GRAVE
+                &kp LSHFT &kp N6   &kp N7 &kp N8          &kp N9         &kp N0                  &kp UNDER &kp PLUS     &kp PIPE      &kp LBRC &kp RBRC &kp TILDE
+                                          &mt LSHFT GRAVE &mt LGUI SPACE &kp TAB                 &trans    &mt RALT RET &mt RSHFT SQT
             >;
         };
 
         lower_layer {
             display-name = "NAV";
-            // ---------------------------------------------------------------------------------------------------
-            // |  TAB |     |     |      |        |       |   |   |        |         |      |       |     | BSPC |
-            // | CTRL |     |     |      |        |       |   |   | LFT    | DWN     |  UP  | RGT   |     |      |
-            // | SHFT |     |     |      |        |       |       | PG_UP  | HOME    | END  | PG_DN |     |      |
-            //                    | SHFT |GUI/SPC |       |       | BSPC   | ALT/RET | SHFT |
+            // -------------------------------------------------------------------------------------------------------
+            // |  TAB |      |     |      |          |       |   |   |        |  PG_UP  |  UP   | PG_DN |     | BSPC |
+            // | CTRL | CTRL | ALT | GUI  | SHFT     |       |   |   |        |   LFT   |  DWN  | RGT   |     |      |
+            // | SHFT |      |     |      |          |       |       |        |   HOME  |       | END   |     |      |
+            //                     | SHFT  | GUI/SPC |       |       | BSPC   | ALT/RET |  SHFT |
             bindings = <
-                &kp TAB   &trans  &trans &trans    &trans         &trans  &trans &trans  &trans     &trans       &trans    &trans     &trans &kp BSPC
-                &kp LCTRL &trans  &trans &trans    &trans         &trans  &trans &trans  &kp LEFT   &kp DOWN     &kp UP    &kp RIGHT  &trans &trans
-                &kp LSHFT &trans  &trans &trans    &trans         &trans                 &kp PG_UP  &kp HOME     &kp END   &kp PG_DN  &trans &trans
-                                         &kp LSHFT &mt LGUI SPACE &trans                 &kp BSPC   &mt ALT RET  &kp RSHFT
+                &kp TAB   &trans     &trans   &trans    &trans         &trans  &trans &trans  &trans     &kp PG_UP    &kp UP    &kp PG_DN  &trans &kp BSPC
+                &kp LCTRL &sk LCTRL  &sk LALT &sk LGUI  &sk LSHFT      &trans  &trans &trans  &trans     &kp LEFT     &kp DOWN  &kp RIGHT  &trans &trans
+                &kp LSHFT &trans     &trans   &trans    &trans         &trans                 &trans     &kp HOME     &trans    &kp END    &trans &trans
+                                              &kp LSHFT &mt LGUI SPACE &trans                 &kp BSPC   &mt RALT RET  &kp RSHFT
             >;
         };
 

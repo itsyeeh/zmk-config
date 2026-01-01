@@ -10,6 +10,20 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    macros {
+        ctab: ctab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
         
@@ -19,6 +33,13 @@
             bindings = <&kp ESC>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
+    };
+
+    // Ctrl-Tab combo
+    combo_ctab {
+            timeout-ms = <50>;
+            key-positions = <2 40>; // W + NAV Thumb
+            bindings = <&ctab>;
     };
 };
 
@@ -80,7 +101,7 @@
 
         fn_layer {
             display-name = "FN";
-            // ------------------------------------------------------------------------------------------------
+            // ----------------------------------------------------------------------------------
             // |      | F1   | F2  | F3  | F4   | F5     |   |   | F6  | F7 | F8 | F9 | F10 |   |
             // |      | F11  | F12 | BT1 | BT2  | Unlock |   |   |     |    |    |    |     |   |
             // |      |      |     | RST | BOOT | BTCR   |       |     |    |    |    |     |   |

@@ -11,22 +11,22 @@
 
 / {
     macros {
-        tab_left: c_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        tab_right: c_s_tab {
+        tab_left: c_s_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL &kp LSHFT>
                 , <&macro_tap &kp TAB>
                 , <&macro_release &kp LCTRL &kp LSHFT>
+                ;
+        };
+        tab_right: c_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LCTRL>
                 ;
         };
         swap_window: g_tab {
@@ -97,7 +97,7 @@
 
         lower_layer {
             display-name = "NAV";
-            // -------------------------------------------------------------------------------------------------------
+            // -------------------------------------------------------------------------------------------------------------------
             // |  TAB | TAB  | SWAP_WIN | TAB_LEFT | TAB_RIGHT | VOL_UP |   |   |        |  PG_UP   |  UP   | PG_DN |     | BSPC |
             // | CTRL | CTRL | ALT      | GUI       | SHFT     | VOL_DN |   |   |        |  LFT     |  DWN  | RGT   |     |      |
             // | SHFT |      |          |           |          | MUTE   |       |        |  HOME    |       | END   |     |      |

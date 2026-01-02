@@ -59,7 +59,7 @@
         };
         combo_del {
             timeout-ms = <50>;
-            key-positions = <11 12>; // The positions of I and O on a 46-key Corne
+            key-positions = <10 11>; // The positions of I and O on a 46-key Corne
             bindings = <&kp DEL>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
@@ -71,7 +71,7 @@
         };
         combo_ret {
             timeout-ms = <50>;
-            key-positions = <35 36>; // The positions of K and L on a 46-key Corne
+            key-positions = <36 37>; // The positions of K and L on a 46-key Corne
             bindings = <&kp RET>;
             layers = <0>;           // 0 is the index of your BASE layer
         };

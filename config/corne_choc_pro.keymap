@@ -45,10 +45,10 @@
     combos {
         compatible = "zmk,combos";
         
-        combo_tab {
+        combo_grave {
             timeout-ms = <50>;
             key-positions = <1 2>; // The positions of W and E on a 46-key Corne
-            bindings = <&kp TAB>;
+            bindings = <&kp GRAVE>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
         combo_esc {

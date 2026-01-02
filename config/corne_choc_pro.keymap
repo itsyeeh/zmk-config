@@ -194,13 +194,13 @@
             display-name = "SYM";
             // -----------------------------------------------------------------------------------------
             // |      |  !  |  @  |  #   |  $      |  %    |   |   |  ^   |  &  |  *   |  (  |  )  |  |
-            // |      |  1  |  2  |  3   |  4      |  5    |   |   |  -   |  =  |  \   |  [  |  ]  |  |
-            // |      |  6  |  7  |  8   |  9      |  0    |       |  _   |  +  | "|"  |  {  |  }  |  |
+            // |      |  1  |  2  |  3   |  4      |  5    |   |   |  _   |  +  |  "|" |  [  |  ]  |  |
+            // |      |  6  |  7  |  8   |  9      |  0    |       |  -   |  =  |  \   |  {  |  }  |  |
             //                    |      |         |  SHFT |       |  SPC |     |      |
             bindings = <
                 &trans &kp EXCL &kp AT   &kp HASH        &kp DLLR       &kp PRCNT &trans &trans &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR &kp RPAR &trans
-                &trans &kp N1   &kp N2   &kp N3          &kp N4         &kp N5    &trans &trans &kp MINUS  &kp EQUAL  &kp BSLH      &kp LBKT &kp RBKT &trans
-                &trans &kp N6   &kp N7   &kp N8          &kp N9         &kp N0                  &kp UNDER  &kp PLUS   &kp PIPE      &kp LBRC &kp RBRC &trans
+                &trans &kp N1   &kp N2   &kp N3          &kp N4         &kp N5    &trans &trans &kp UNDER  &kp PLUS   &kp PIPE      &kp LBKT &kp RBKT &trans
+                &trans &kp N6   &kp N7   &kp N8          &kp N9         &kp N0                  &kp MINUS  &kp EQUAL  &kp BSLH      &kp LBRC &kp RBRC &trans
                                          &trans          &trans         &kp LSHFT               &kp SPACE  &trans     &trans
             >;
         };

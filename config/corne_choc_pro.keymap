@@ -53,26 +53,50 @@
         };
         combo_lalt {
             timeout-ms = <50>;
-            key-positions = <15 29>; // The positions of J and K on a 46-key Corne
+            key-positions = <15 29>; // The positions of A and Z on a 46-key Corne
             bindings = <&kp LALT>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
         combo_lctrl {
             timeout-ms = <50>;
-            key-positions = <16 30>; // The positions of J and K on a 46-key Corne
+            key-positions = <16 30>; // The positions of S and X on a 46-key Corne
             bindings = <&kp LCTRL>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
         combo_lgui {
             timeout-ms = <50>;
-            key-positions = <17 31>; // The positions of J and K on a 46-key Corne
+            key-positions = <17 31>; // The positions of D and C on a 46-key Corne
             bindings = <&kp LGUI>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
         combo_lshft {
             timeout-ms = <50>;
-            key-positions = <18 32>; // The positions of J and K on a 46-key Corne
-            bindings = <&kp LLSHFT>;
+            key-positions = <18 32>; // The positions of F and V on a 46-key Corne
+            bindings = <&kp LSHFT>;
+            layers = <0>;           // 0 is the index of your BASE layer
+        };
+        combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <23 37>; // The positions of J and M on a 46-key Corne
+            bindings = <&kp RALT>;
+            layers = <0>;           // 0 is the index of your BASE layer
+        };
+        combo_rctrl {
+            timeout-ms = <50>;
+            key-positions = <24 38>; // The positions of K and , on a 46-key Corne
+            bindings = <&kp RCTRL>;
+            layers = <0>;           // 0 is the index of your BASE layer
+        };
+        combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <25 39>; // The positions of L and . on a 46-key Corne
+            bindings = <&kp RGUI>;
+            layers = <0>;           // 0 is the index of your BASE layer
+        };
+        combo_rshft {
+            timeout-ms = <50>;
+            key-positions = <26 40>; // The positions of ; and / on a 46-key Corne
+            bindings = <&kp RSHFT>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
     };

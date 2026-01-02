@@ -182,12 +182,12 @@
         lower_layer {
             display-name = "NAV";
             // -------------------------------------------------------------------------------------------------------------------
-            // |      | TAB  | SWAP_WIN | TAB_LEFT | TAB_RIGHT | VOL_UP |   |   |        |  PG_UP   |  UP   | PG_DN |     |      |
+            // |      |      | SWAP_WIN | TAB_LEFT | TAB_RIGHT | VOL_UP |   |   |        |  PG_UP   |  UP   | PG_DN |     |      |
             // |      | CTRL | ALT      | GUI       | SHFT     | VOL_DN |   |   |        |  LFT     |  DWN  | RGT   |     |      |
             // |      |      |          |           |          | MUTE   |       |        |  HOME    |       | END   |     |      |
             //                          |           | GUI/SPC  |        |       | BSPC   | ALT/RET  |       |
             bindings = <
-                &trans &kp TAB   &swap_window &tab_left   &tab_right     &kp C_VOL_UP  &trans &trans  &trans     &kp PG_UP    &kp UP    &kp PG_DN  &trans &trans
+                &trans &trans    &swap_window &tab_left   &tab_right     &kp C_VOL_UP  &trans &trans  &trans     &kp PG_UP    &kp UP    &kp PG_DN  &trans &trans
                 &trans &sk LCTRL &sk LALT     &sk LGUI    &sk LSHFT      &kp C_VOL_DN  &trans &trans  &trans     &kp LEFT     &kp DOWN  &kp RIGHT  &trans &trans
                 &trans &trans    &trans       &trans      &trans         &kp C_MUTE                   &trans     &kp HOME     &trans    &kp END    &trans &trans
                                               &trans      &mt LGUI SPACE &trans                       &kp BSPC   &mt RALT RET &trans

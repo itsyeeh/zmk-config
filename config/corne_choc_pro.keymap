@@ -85,6 +85,11 @@
             bindings = <&kp BSPC>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
+        combo_nav_bspc {
+            timeout-ms = <50>;
+            key-positions = <41 43>; // NAV + SPACE
+            bindings = <&kp BSPC>;
+        };
         combo_sqt {
             timeout-ms = <50>;
             key-positions = <25 26>; // The positions of L and ; on a 46-key Corne
@@ -145,6 +150,7 @@
             bindings = <&kp RALT>;
             layers = <0>;           // 0 is the index of the BASE layer
         };
+
     };
 };
 

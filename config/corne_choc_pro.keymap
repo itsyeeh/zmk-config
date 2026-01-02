@@ -10,6 +10,16 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        fn_layer {
+            if-layers = <1 2>; // SYM (1) and NAV (2)
+            then-layer = <3>;  // Activates FN (3)
+        };
+    };
+};
+
+/ {
     macros {
         tab_left: c_s_tab {
             compatible = "zmk,behavior-macro";

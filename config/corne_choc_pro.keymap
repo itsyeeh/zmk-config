@@ -13,7 +13,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         fn_layer {
-            if-layers = <1 2>; // SYM (1) and NAV (2)
+            if-layers = <1 2>; // NAV (1) and SYM (2) 
             then-layer = <3>;  // Activates FN (3)
         };
     };
@@ -164,7 +164,7 @@
             // |      |  Q  |  W  |  E   |  R      |  T      |   |   |  Y       |  U        |  I   |  O  |  P  |     |
             // |      |  A  |  S  |  D   |  F      |  G      |   |   |  H       |  J        |  K   |  L  |  ;  |     |
             // |      |  Z  |  X  |  C   |  V      |  B      |       |  N       |  M        |  ,   |  .  |  /  |     |
-            //                    |      | GUI/SPC | NAV/TAB |       | SYM/BSPC | SHFT/RET  |      |
+            //                    |      | NAV     | SHFT    |       | SPC      | SYM       |      |
             bindings = <
                 &trans &kp Q   &kp W  &kp E            &kp R           &kp T     &trans &trans  &kp Y      &kp U         &kp I     &kp O   &kp P      &trans
                 &trans &kp A   &kp S  &kp D            &kp F           &kp G     &trans &trans  &kp H      &kp J         &kp K     &kp L   &kp SEMI   &trans
@@ -180,27 +180,27 @@
             // |      |      | SWAP_WIN | TAB_LEFT | TAB_RIGHT | VOL_UP |   |   |        |  PG_UP    |  UP   | PG_DN |     |      |
             // |      | ALT  |   CTRL   | GUI       | SHFT     | VOL_DN |   |   |        |  LFT      |  DWN  | RGT   |     |      |
             // |      |      |          |           |          | MUTE   |       |        |  HOME     |       | END   |     |      |
-            //                          |           | GUI/SPC  |        |       | BSPC   | SHFT/RET  |       |
+            //                          |           |          | SHFT   |       | SPC    |           |       |
             bindings = <
                 &trans &trans    &swap_window &tab_left   &tab_right     &kp C_VOL_UP  &trans &trans  &trans     &kp PG_UP     &kp UP    &kp PG_DN  &trans &trans
                 &trans &sk LALT  &sk LCTRL    &sk LGUI    &sk LSHFT      &kp C_VOL_DN  &trans &trans  &trans     &kp LEFT      &kp DOWN  &kp RIGHT  &trans &trans
                 &trans &trans    &trans       &trans      &trans         &kp C_MUTE                   &trans     &kp HOME      &trans    &kp END    &trans &trans
-                                              &trans      &trans         &kp LSHFT                    &kp SPACE  &mo 2         &trans
+                                              &trans      &trans         &kp LSHFT                    &kp SPACE  &trans        &trans
             >;
         };
 
         raise_layer {
             display-name = "SYM";
             // -----------------------------------------------------------------------------------------
-            // |      |  !  |  @  |  #   |  $      |  %   |   |   |  ^  |  &       |  *   |  (  |  )  |  |
-            // |      |  1  |  2  |  3   |  4      |  5   |   |   |  -  |  =       |  \   |  [  |  ]  |  |
-            // |      |  6  |  7  |  8   |  9      |  0   |       |  _  |  +       | "|"  |  {  |  }  |  |
-            //                    |      | GUI/SPC |  TAB |       |     | SHFT/RET |      |
+            // |      |  !  |  @  |  #   |  $      |  %    |   |   |  ^   |  &  |  *   |  (  |  )  |  |
+            // |      |  1  |  2  |  3   |  4      |  5    |   |   |  -   |  =  |  \   |  [  |  ]  |  |
+            // |      |  6  |  7  |  8   |  9      |  0    |       |  _   |  +  | "|"  |  {  |  }  |  |
+            //                    |      |         |  SHFT |       |  SPC |     |      |
             bindings = <
                 &trans &kp EXCL &kp AT   &kp HASH        &kp DLLR       &kp PRCNT &trans &trans &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR &kp RPAR &trans
                 &trans &kp N1   &kp N2   &kp N3          &kp N4         &kp N5    &trans &trans &kp MINUS  &kp EQUAL  &kp BSLH      &kp LBKT &kp RBKT &trans
                 &trans &kp N6   &kp N7   &kp N8          &kp N9         &kp N0                  &kp UNDER  &kp PLUS   &kp PIPE      &kp LBRC &kp RBRC &trans
-                                         &trans          &mo 1          &kp LSHFT               &kp SPACE  &trans     &trans
+                                         &trans          &trans         &kp LSHFT               &kp SPACE  &trans     &trans
             >;
         };
 

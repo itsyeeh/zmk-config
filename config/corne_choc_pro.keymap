@@ -78,25 +78,25 @@
         combo_ralt {
             timeout-ms = <50>;
             key-positions = <23 35>; // The positions of J and M on a 46-key Corne
-            bindings = <&kp RALT>;
+            bindings = <&kp RSHFT>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
         combo_rctrl {
             timeout-ms = <50>;
             key-positions = <24 36>; // The positions of K and , on a 46-key Corne
-            bindings = <&kp RCTRL>;
+            bindings = <&kp RGUI>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
         combo_rgui {
             timeout-ms = <50>;
             key-positions = <25 37>; // The positions of L and . on a 46-key Corne
-            bindings = <&kp RGUI>;
+            bindings = <&kp RCTRL>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
         combo_rshft {
             timeout-ms = <50>;
             key-positions = <26 38>; // The positions of ; and / on a 46-key Corne
-            bindings = <&kp RSHFT>;
+            bindings = <&kp RALT>;
             layers = <0>;           // 0 is the index of your BASE layer
         };
     };

@@ -181,12 +181,12 @@
             // |      | TAB  |      |     |      | VOL_UP |   |   | PG_UP    |  HOME     |  UP       | END | DEL  |      |
             // |      | ALT  | CTRL | GUI | SHFT | VOL_DN |   |   | PG_DN    |  LFT      |  DWN      | RGT | BSPC |      |
             // |      | ESC  |      |     |      | MUTE   |       | SWAP_WIN |  TAB_LEFT | TAB_RIGHT |     | RET  |      |
-            //                      |     |      |        |       | BSPC     |           |           |
+            //                      |     |      |        |       | BSPC     |  RET      |           |
             bindings = <
                 &trans &kp TAB   &trans       &trans      &trans         &kp C_VOL_UP  &trans &trans  &kp PG_UP    &kp HOME   &kp UP     &kp END    &kp DEL   &trans
                 &trans &sk LALT  &sk LCTRL    &sk LGUI    &sk LSHFT      &kp C_VOL_DN  &trans &trans  &kp PG_DN    &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC  &trans
                 &trans &kp ESC   &trans       &trans      &trans         &kp C_MUTE                   &swap_window &tab_left  &tab_right &trans     &kp RET   &trans
-                                              &trans      &trans         &trans                       &kp BSPC     &trans     &trans
+                                              &trans      &trans         &trans                       &kp BSPC     &kp RET    &trans
             >;
         };
 
@@ -196,12 +196,12 @@
             // |      |  !  |  @  |  #   |  $      |  %    |   |   |  ^   |  &  |  *   |  (  |  )  |  |
             // |      |  1  |  2  |  3   |  4      |  5    |   |   |  _   |  +  |  "|" |  [  |  ]  |  |
             // |      |  6  |  7  |  8   |  9      |  0    |       |  -   |  =  |  \   |  {  |  }  |  |
-            //                    |      |         |       |       |      |     |      |
+            //                    |      |  TAB    | SPACE |       |      |     |      |
             bindings = <
                 &trans &kp EXCL &kp AT   &kp HASH        &kp DLLR       &kp PRCNT &trans &trans &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR &kp RPAR &trans
                 &trans &kp N1   &kp N2   &kp N3          &kp N4         &kp N5    &trans &trans &kp UNDER  &kp PLUS   &kp PIPE      &kp LBKT &kp RBKT &trans
                 &trans &kp N6   &kp N7   &kp N8          &kp N9         &kp N0                  &kp MINUS  &kp EQUAL  &kp BSLH      &kp LBRC &kp RBRC &trans
-                                         &trans          &trans         &trans                  &trans     &trans     &trans
+                                         &trans          &kp TAB        &kp SPACE               &trans     &trans     &trans
             >;
         };
 

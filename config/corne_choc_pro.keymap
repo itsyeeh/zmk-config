@@ -175,7 +175,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
-        lower_layer {
+        nav_layer {
             display-name = "NAV";
             // -----------------------------------------------------------------------------------------------------------
             // |      | TAB  |      |     |      | VOL_UP |   |   | PG_UP    |  HOME     |  UP       | END | DEL  |      |
@@ -190,7 +190,7 @@
             >;
         };
 
-        raise_layer {
+        sym_layer {
             display-name = "SYM";
             // --------------------------------------------------------------------------------------------
             // |      |  !  |  @  |  #   |  $      |  %        |   |   |  ^   |  &  |  *   |  (  |  )  |  |
@@ -217,6 +217,21 @@
                 &trans &kp F11 &kp F12 &bt BT_SEL 1 &bt BT_SEL 2 &studio_unlock  &trans &trans   &trans &trans  &trans  &trans  &trans  &trans
                 &trans &trans  &trans  &sys_reset   &bootloader  &bt BT_CLR                      &trans &trans  &trans  &trans  &trans  &trans 
                                        &trans       &trans       &trans                          &trans &trans  &trans
+            >;
+        };
+
+        sym2_layer {
+            display-name = "SYM2";
+            // --------------------------------------------------------------------------------------------
+            // |      |  !  |  @  |  #   |  $      |  %        |   |   |  7   |  8  |  9   |  -  |  /  |  |
+            // |      |  ^  |  &  |  *   |  (      |  )        |   |   |  4   |  5  |  6   |  +  |  *  |  |
+            // |      |     |  [  |  ]   |  {      |  }        |       |  1   |  2  |  3   |  .  |  =  |  |
+            //                    |      |  TAB    | SHFT/BSPC |       |  0   |     |      |
+            bindings = <
+                &trans &kp EXCL   &kp AT   &kp HASH  &kp DLLR &kp PRCNT      &trans &trans  &kp N7  &kp N8  &kp N9  &kp MINUS &kp FSLH  &trans
+                &trans &kp CARET  &kp AMPS &kp ASTRK &kp LPAR &kp RPAR       &trans &trans  &kp N4  &kp N5  &kp N6  &kp PLUS  &kp ASTRK &trans
+                &trans &trans     &kp LBKT &kp RBKT  &kp LBRC &kp RBRC                      &kp N1  &kp N2  &kp N3  &kp DOT   &kp EQUAL &trans
+                                           &trans    &kp TAB  &mt LSHFT SPACE               &trans  &kp N0  &trans
             >;
         };
     };

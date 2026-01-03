@@ -167,21 +167,21 @@
             // |      |  Z  |  X  |  C   |  V      |  B        |       |  N       |  M        |  ,   |  .  |  /  |     |
             //                    |      | NAV/TAB | SHFT/BSPC |       | GUI/SPC  | SYM/RET   |      |
             bindings = <
-                &trans &kp Q   &kp W  &kp E            &kp R           &kp T         &trans &trans  &kp Y           &kp U         &kp I     &kp O   &kp P      &trans
-                &trans &kp A   &kp S  &kp D            &kp F           &kp G         &trans &trans  &kp H           &kp J         &kp K     &kp L   &kp SEMI   &trans
-                &trans &kp Z   &kp X  &kp C            &kp V           &kp B                        &kp N           &kp M         &kp COMMA &kp DOT &kp FSLH   &trans
-                                      &trans           &lt 1 TAB       &mt LSHFT BSPC               &mt LGUI SPACE  &lt 2 RET     &trans
+                &trans &kp Q   &kp W  &kp E            &kp R           &kp T           &trans &trans  &kp Y           &kp U         &kp I     &kp O   &kp P      &trans
+                &trans &kp A   &kp S  &kp D            &kp F           &kp G           &trans &trans  &kp H           &kp J         &kp K     &kp L   &kp SEMI   &trans
+                &trans &kp Z   &kp X  &kp C            &kp V           &kp B                          &kp N           &kp M         &kp COMMA &kp DOT &kp FSLH   &trans
+                                      &trans           &lt 1 TAB       &mt LSHFT SPACE                &mt LGUI BSPC   &lt 2 RET     &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         lower_layer {
             display-name = "NAV";
-            // ---------------------------------------------------------------------------------------------------------------------
-            // |      | TAB  |          |           |          | VOL_UP |   |   | PG_UP    |  HOME    |  UP       | END | DEL  |      |
-            // |      | ALT  |   CTRL   | GUI       | SHFT     | VOL_DN |   |   | PG_DN    |  LFT     |  DWN      | RGT | BSPC |      |
-            // |      | ESC  |          |           |          | MUTE   |       | SWAP_WIN | TAB_LEFT | TAB_RIGHT |     | RET  |      |
-            //                          |           |          |        |       | BSPC     |          |           |
+            // -------------------------------------------------------------------------------------------------------------------------
+            // |      | TAB  |      |     |      | VOL_UP |   |   | PG_UP    |  HOME     |  UP       | END | DEL  |      |
+            // |      | ALT  | CTRL | GUI | SHFT | VOL_DN |   |   | PG_DN    |  LFT      |  DWN      | RGT | BSPC |      |
+            // |      | ESC  |      |     |      | MUTE   |       | SWAP_WIN |  TAB_LEFT | TAB_RIGHT |     | RET  |      |
+            //                      |     |      |        |       | BSPC     |           |           |
             bindings = <
                 &trans &kp TAB   &trans       &trans      &trans         &kp C_VOL_UP  &trans &trans  &kp PG_UP    &kp HOME   &kp UP     &kp END    &kp DEL   &trans
                 &trans &sk LALT  &sk LCTRL    &sk LGUI    &sk LSHFT      &kp C_VOL_DN  &trans &trans  &kp PG_DN    &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC  &trans

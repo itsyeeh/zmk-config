@@ -161,27 +161,48 @@
 
         default_layer {
             display-name = "BASE";
-            // ---------------------------------------------------------------------------------------------------------
-            // |      |  Q  |  W  |  E   |  R      |  T        |   |   |  Y       |  U        |  I   |  O  |  P  |     |
-            // |      |  A  |  S  |  D   |  F      |  G        |   |   |  H       |  J        |  K   |  L  |  ;  |     |
-            // |      |  Z  |  X  |  C   |  V      |  B        |       |  N       |  M        |  ,   |  .  |  /  |     |
-            //                    |      | NAV/TAB | SHFT/ SPC |       | GUI/BSPC | SYM/RET   |      |
+            /*
+                 Pinky     Ring    Middle    Index   Inner     Inner   Index    Middle    Ring    Pinky
+                ┌───────┬────────┬────────┬────────┬───────┐ ┌───────┬────────┬────────┬────────┬───────┐
+            Top |   Q   |   W    |   F    |   P    |   B   | |   J   |   L    |   U    |   Y    |   ;   |
+                ├───────┼────────┼────────┼────────┼───────┤ ├───────┼────────┼────────┼────────┼───────┤
+            Home|   A   |   R    |   S    |   T    |   G   | |   M   |   N    |   E    |   I    |   O   |
+                ├───────┼────────┼────────┼────────┼───────┤ ├───────┼────────┼────────┼────────┼───────┤
+            Bot |   Z   |   X    |   C    |   D    |   V   | |   K   |   H    |   ,    |   .    |   /   |
+                └───────┴────────┴────────┴────────┴───────┘ └───────┴────────┴────────┴────────┴───────┘
+                                    ┌────────┬───────┐                 ┌───────┬────────┐
+                                    |  TAB   | SPACE |                 | BSPC  |  RET   |
+                                    |  NAV   | SHFT  |                 | GUI   |  SYM   |
+                                    └────────┴───────┘                 └───────┴────────┘
+            */
+
             bindings = <
-                &trans &kp Q   &kp W  &kp E   &kp R      &kp T           &trans &trans  &kp Y           &kp U         &kp I     &kp O   &kp P      &trans
-                &trans &kp A   &kp S  &kp D   &kp F      &kp G           &trans &trans  &kp H           &kp J         &kp K     &kp L   &kp SEMI   &trans
-                &trans &kp Z   &kp X  &kp C   &kp V      &kp B                          &kp N           &kp M         &kp COMMA &kp DOT &kp FSLH   &trans
-                                      &trans  &lt 1 TAB  &mt LSHFT SPACE                &mt LGUI BSPC   &lt 2 RET     &trans
+                &trans &kp Q   &kp W   &kp F   &kp P   &kp B            &trans &trans  &kp J   &kp L   &kp U     &kp Y   &kp SEMI  &trans
+                &trans &kp A   &kp R   &kp S   &kp T   &kp G            &trans &trans  &kp M   &kp N   &kp E     &kp I   &kp O     &trans
+                &trans &kp Z   &kp X   &kp C   &kp D   &kp V                           &kp K   &kp H   &kp COMMA &kp DOT &kp FSLH  &trans
+                                       &trans  &lt 1 TAB &mt LSHFT SPACE               &mt LGUI BSPC  &lt 2 RET  &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         nav_layer {
             display-name = "NAV";
-            // ------------------------------------------------------------------------------------------------------------
-            // |      | TAB  |      |     |      | VOL_UP |   |   | PG_UP     |  HOME     |  UP       | END | DEL  |      |
-            // |      | ALT  | CTRL | GUI | SHFT | VOL_DN |   |   | PG_DN     |  LFT      |  DWN      | RGT | BSPC |      |
-            // |      | ESC  |      |     |      | MUTE   |       | SWAP_WIN  |  TAB_LEFT | TAB_RIGHT |     | RET  |      |
-            //                      |     |      |        |       | GUI/BSPC  |  RET      |           |
+            /*
+                ┌─────────┬─────────┬─────────┬─────────┬─────────┐       ┌─────────┬─────────┬─────────┬─────────┬─────────┐
+            Top |   TAB   |    -    |    -    |    -    | VOL UP  |       |  PG UP  |  HOME   |   UP    |   END   |   DEL   |
+                ├─────────┼─────────┼─────────┼─────────┼─────────┤       ├─────────┼─────────┼─────────┼─────────┼─────────┤
+            Home|  LALT   |  LCTRL  |  LGUI   |  LSHFT  | VOL DN  |       |  PG DN  |  LEFT   |  DOWN   |  RIGHT  |  BSPC   |
+                | (STICKY)| (STICKY)| (STICKY)| (STICKY)|         |       |         |         |         |         |         |
+                ├─────────┼─────────┼─────────┼─────────┼─────────┤       ├─────────┼─────────┼─────────┼─────────┼─────────┤
+            Bot |   ESC   |    -    |    -    |    -    |  MUTE   |       | SWAP WIN| TAB LFT | TAB RGT |    -    |   RET   |
+                └─────────┴─────────┴─────────┴─────────┴─────────┘       └─────────┴─────────┴─────────┴─────────┴─────────┘
+                                    ┌─────────┬─────────┐                   ┌─────────┬─────────┐
+                                    |    -    |    -    |                   |  BSPC   |   RET   |
+                                    | (TRANS) | (TRANS) |                   |  LGUI   |         |
+                                    └─────────┴─────────┘                   └─────────┴─────────┘
+            */
+
             bindings = <
                 &trans &kp TAB   &trans      &trans      &trans     &kp C_VOL_UP  &trans &trans  &kp PG_UP     &kp HOME   &kp UP     &kp END    &kp DEL   &trans
                 &trans &sk LALT  &sk LCTRL   &sk LGUI    &sk LSHFT  &kp C_VOL_DN  &trans &trans  &kp PG_DN     &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC  &trans
@@ -192,11 +213,20 @@
 
         sym_layer {
             display-name = "SYM";
-            // --------------------------------------------------------------------------------------------
-            // |      |  !  |  @  |  #   |  $      |  %        |   |   |  ^   |  &  |  *   |  (  |  )  |  |
-            // |      |  1  |  2  |  3   |  4      |  5        |   |   |  _   |  +  |  "|" |  [  |  ]  |  |
-            // |      |  6  |  7  |  8   |  9      |  0        |       |  -   |  =  |  \   |  {  |  }  |  |
-            //                    |      |  TAB    | SHFT/SPC  |       |      |     |      |
+            /*
+                ┌─────────┬─────────┬─────────┬─────────┬─────────┐       ┌─────────┬─────────┬─────────┬─────────┬─────────┐
+            Top |    !    |    @    |    #    |    $    |    %    |       |    ^    |    &    |    *    |    (    |    )    |
+                ├─────────┼─────────┼─────────┼─────────┼─────────┤       ├─────────┼─────────┼─────────┼─────────┼─────────┤
+            Home|    1    |    2    |    3    |    4    |    5    |       |    _    |    +    |    |    |    [    |    ]    |
+                ├─────────┼─────────┼─────────┼─────────┼─────────┤       ├─────────┼─────────┼─────────┼─────────┼─────────┤
+            Bot |    6    |    7    |    8    |    9    |    0    |       |    -    |    =    |    \    |    {    |    }    |
+                └─────────┴─────────┴─────────┴─────────┴─────────┘       └─────────┴─────────┴─────────┴─────────┴─────────┘
+                                    ┌─────────┬─────────┐                   ┌─────────┬─────────┐
+                                    |   TAB   |  SPACE  |                   |    -    |    -    |
+                                    |         |  LSHFT  |                   | (TRANS) | (TRANS) |
+                                    └─────────┴─────────┘                   └─────────┴─────────┘
+            */
+
             bindings = <
                 &trans &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT       &trans &trans &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR &kp RPAR &trans
                 &trans &kp N1   &kp N2   &kp N3   &kp N4   &kp N5          &trans &trans &kp UNDER  &kp PLUS   &kp PIPE      &kp LBKT &kp RBKT &trans
@@ -207,11 +237,21 @@
 
         fn_layer {
             display-name = "FN";
-            // ----------------------------------------------------------------------------------
-            // |      | F1   | F2  | F3  | F4   | F5     |   |   | F6  | F7 | F8 | F9 | F10 |   |
-            // |      | F11  | F12 | BT1 | BT2  | Unlock |   |   |     |    |    |    |     |   |
-            // |      |      |     | RST | BOOT | BTCR   |       |     |    |    |    |     |   |
-            //                     |     |      |        |       |     |    |    |
+            /*
+                ┌─────────┬─────────┬─────────┬─────────┬─────────┐       ┌─────────┬─────────┬─────────┬─────────┬─────────┐
+            Top |   F1    |   F2    |   F3    |   F4    |   F5    |       |   F6    |   F7    |   F8    |   F9    |   F10   |
+                ├─────────┼─────────┼─────────┼─────────┼─────────┤       ├─────────┼─────────┼─────────┼─────────┼─────────┤
+            Home|   F11   |   F12   |  BT 1   |  BT 2   | STUDIO  |       |    -    |    -    |    -    |    -    |    -    |
+                |         |         | (SEL)   | (SEL)   | UNLOCK  |       |         |         |         |         |         |
+                ├─────────┼─────────┼─────────┼─────────┼─────────┤       ├─────────┼─────────┼─────────┼─────────┼─────────┤
+            Bot |    -    |    -    | SYS RST | BOOTLDR | BT CLR  |       |    -    |    -    |    -    |    -    |    -    |
+                └─────────┴─────────┴─────────┴─────────┴─────────┘       └─────────┴─────────┴─────────┴─────────┴─────────┘
+                                    ┌─────────┬─────────┐                   ┌─────────┬─────────┐
+                                    |    -    |    -    |                   |    -    |    -    |
+                                    | (TRANS) | (TRANS) |                   | (TRANS) | (TRANS) |
+                                    └─────────┴─────────┘                   └─────────┴─────────┘
+            */
+            
             bindings = <
                 &trans &kp F1  &kp F2  &kp F3       &kp F4       &kp F5          &trans &trans   &kp F6 &kp F7  &kp F8  &kp F9  &kp F10 &trans
                 &trans &kp F11 &kp F12 &bt BT_SEL 1 &bt BT_SEL 2 &studio_unlock  &trans &trans   &trans &trans  &trans  &trans  &trans  &trans

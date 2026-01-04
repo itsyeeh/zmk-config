@@ -5,7 +5,7 @@
 
 / {
     chosen {
-        zmk,physical-layout = &default_layout;
+        zmk,physical-layout = &base_layer;
     };
 };
 

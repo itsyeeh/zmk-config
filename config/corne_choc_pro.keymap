@@ -44,6 +44,7 @@
         */
 
         base_layer {
+            display-name = "BASE";
             bindings = <
                 &trans  &kp Q      &kp W       &kp F       &kp P       &kp B      &trans        &trans  &kp J       &kp L       &kp U       &kp Y       &kp SQT    &trans
                 &trans  &hm LALT A &hm LCTRL R &hm LGUI S &hm LSHFT T  &kp G      &trans        &trans  &kp M       &hm RSHFT N &hm RGUI  E &hm RCTRL I &hm RALT O &trans
@@ -69,6 +70,7 @@
         */
 
         nav_layer {
+            display-name = "NAV";
             bindings = <
                 &trans  &trans     &trans     &trans      &trans      &trans     &trans        &trans  &kp AGAIN   &kp PASTE   &kp COPY    &kp CUT     &kp UNDO   &trans
                 &trans  &kp LALT   &kp LCTRL  &kp LGUI    &kp LSHFT   &trans     &trans        &trans  &kp CAPS    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT  &trans
@@ -94,6 +96,7 @@
         */
 
         mouse_layer {
+            display-name = "MOU";
             bindings = <
                 &trans  &trans     &trans     &trans      &trans      &trans     &trans        &trans  &trans      &trans      &trans      &trans      &trans     &trans
                 &trans  &kp LALT   &kp LCTRL  &kp LGUI    &kp LSHFT   &trans     &trans        &trans  &trans      &trans      &trans      &trans      &trans     &trans
@@ -119,6 +122,7 @@
         */
 
         sym_layer {
+            display-name = "SYM";
             bindings = <
                 &trans  &kp LBRC   &kp AMPS   &kp ASTRK   &kp LPAR    &kp RBRC   &trans        &trans  &trans      &trans      &trans      &trans      &trans     &trans
                 &trans  &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET   &kp PLUS   &trans        &trans  &trans      &kp RSHFT   &kp RGUI    &kp RCTRL   &kp RALT   &trans
@@ -144,6 +148,7 @@
         */
 
         media_layer {
+            display-name = "MED";
             bindings = <
                 &trans  &trans     &trans     &trans      &trans      &trans     &trans        &trans  &trans      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &trans         &trans
                 &trans  &kp LALT   &kp LCTRL  &kp LGUI    &kp LSHFT   &trans     &trans        &trans  &trans      &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP  &kp C_NEXT     &trans
@@ -169,6 +174,7 @@
         */
 
         num_layer {
+            display-name = "NUM";
             bindings = <
                 &trans  &kp LBKT   &kp N7     &kp N8      &kp N9      &kp RBKT   &trans        &trans  &trans      &trans      &trans       &trans      &trans     &trans
                 &trans  &kp SEMI   &kp N4     &kp N5      &kp N6      &kp EQUAL  &trans        &trans  &trans      &kp RSHFT   &kp RGUI     &kp RCTRL   &kp RALT   &trans
@@ -194,6 +200,7 @@
         */
 
         fun_layer {
+            display-name = "FN";
             bindings = <
                 &trans  &kp F12    &kp F7     &kp F8      &kp F9      &kp PSCRN  &trans        &trans  &trans      &trans      &trans      &trans      &trans     &trans
                 &trans  &kp F11    &kp F4     &kp F5      &kp F6      &kp SLCK   &trans        &trans  &trans      &kp RSHFT   &kp RGUI    &kp RCTRL   &kp RALT   &trans

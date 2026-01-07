@@ -107,100 +107,115 @@
         exclCombo {
             bindings = <&kp EXCL>;
             key-positions = <15 1>;
-            require-prior-idle-ms = <75>;
             layers = <0>;
         };
 
         AtCombo {
             bindings = <&kp AT>;
             key-positions = <16 2>;
-            require-prior-idle-ms = <75>;
             layers = <0>;
         };
 
         HashCombo {
             bindings = <&kp HASH>;
             key-positions = <17 3>;
+            layers = <0>;
         };
 
         DollCombo {
             bindings = <&kp DOLLAR>;
             key-positions = <18 4>;
+            layers = <0>;
         };
 
         PercCombo {
             bindings = <&kp PERCENT>;
             key-positions = <19 5>;
+            layers = <0>;
         };
 
         CaretCombo {
             bindings = <&kp CARET>;
             key-positions = <22 8>;
+            layers = <0>;
         };
 
         AmpsCombo {
             bindings = <&kp AMPERSAND>;
             key-positions = <23 9>;
+            layers = <0>;
         };
 
         AsterCombo {
             bindings = <&kp ASTRK>;
             key-positions = <24 10>;
+            layers = <0>;
         };
 
         LpareCombo {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <25 11>;
+            layers = <0>;
         };
 
         RpareCombo {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <26 12>;
+            layers = <0>;
         };
 
         LbrcCombo {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <37 25>;
+            layers = <0>;
         };
 
         RbrcCombo {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <38 26>;
+            layers = <0>;
         };
 
         UnderCombo {
             bindings = <&kp UNDER>;
             key-positions = <34 22>;
+            layers = <0>;
         };
 
         MinusCombo {
             bindings = <&kp MINUS>;
             key-positions = <35 23>;
+            layers = <0>;
         };
 
         PlusCombo {
             bindings = <&kp PLUS>;
             key-positions = <36 24>;
+            layers = <0>;
         };
 
         PipeCombo {
             bindings = <&kp PIPE>;
             key-positions = <33 19>;
+            layers = <0>;
         };
 
         EqualCombo {
             bindings = <&kp EQUAL>;
             key-positions = <32 18>;
+            layers = <0>;
         };
 
         TildeCombo {
             bindings = <&kp TILDE>;
             key-positions = <31 17>;
+            layers = <0>;
         };
 
         GraveCombo {
             bindings = <&kp GRAVE>;
             key-positions = <30 16>;
+            layers = <0>;
         };
     };
 

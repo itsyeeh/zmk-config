@@ -1,3 +1,6 @@
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -222,9 +225,9 @@
         Bot |    Z    |    X    |    C    |    D    |    V    |       |    K    |    H    |    ,    |    .    |    /    |
             └─────────┴─────────┴─────────┴─────────┴─────────┘       └─────────┴─────────┴─────────┴─────────┴─────────┘
                         (X)    ┌─────────┬─────────┬─────────┐       ┌─────────┬─────────┬─────────┐   (X)
-                                |   ESC   |  SPACE  |   TAB   |       |   RET   |   BSPC  |   DEL   |
-                                | (MEDIA) |  (NAV)  | (MOUSE) |       |  (SYM)  |  (NUM)  |  (FUN)  |
-                                └─────────┴─────────┴─────────┘       └─────────┴─────────┴─────────┘
+                               |   ESC   |  SPACE  |   TAB   |       |   RET   |   BSPC  |   DEL   |
+                               | (MEDIA) |  (NAV)  | (MOUSE) |       |  (SYM)  |  (NUM)  |  (FUN)  |
+                               └─────────┴─────────┴─────────┘       └─────────┴─────────┴─────────┘
         */
 
         default_layout {

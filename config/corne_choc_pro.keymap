@@ -132,46 +132,55 @@
         LBracCom {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <37 25>;
+            layers = <0>;
         };
 
         RbraceCom {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <36 24>;
+            layers = <0>;
         };
 
         LBraceCom {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <35 23>;
+            layers = <0>;
         };
 
         PipeCom {
             bindings = <&kp PIPE>;
             key-positions = <34 22>;
+            layers = <0>;
         };
 
         BslhCom {
             bindings = <&kp BACKSLASH>;
             key-positions = <33 19>;
+            layers = <0>;
         };
 
         PlusCom {
             bindings = <&kp PLUS>;
             key-positions = <32 18>;
+            layers = <0>;
         };
 
         EqualCom {
             bindings = <&kp EQUAL>;
             key-positions = <31 17>;
+            layers = <0>;
         };
 
         UnderCom {
             bindings = <&kp UNDER>;
             key-positions = <30 16>;
+            layers = <0>;
         };
 
         MinusCom {
             bindings = <&kp MINUS>;
             key-positions = <29 15>;
+            layers = <0>;
         };
     };
 
